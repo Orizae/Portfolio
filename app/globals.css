@@ -30,6 +30,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.background {
+  background: var(--background);
+}
+
 .photoBackground {
   background: var(--photo_background);
 }

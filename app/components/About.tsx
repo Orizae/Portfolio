@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import stack from '@/public/icons/stack_light_icon.svg'
 import html_logo from '@/public/icons/htm5_logo.svg';
@@ -18,20 +21,29 @@ import { FiUser } from "react-icons/fi";
 
 const About = () => {
   return (
-    <section id='about' className="flex flex-col items-center justify-center mx-auto mb-24">
-      <h2 className="flex mr-auto">
+    <motion.section
+      id='about'
+      className="flex flex-col items-center justify-center mx-auto md:mb-4"
+      initial={{ transform: "translateY(50vh)" }}
+      animate={{ transform: "translateY(0px)" }}
+      transition={{ type: "spring" }}
+    >
+      <h2 className="flex mr-auto pl-6 lg:pl-0">
         <FiUser className="text-[#ff9e27] w-12 h-12 mr-3 relative bottom-1" />
         <span className='text-4xl text-[#ff9e27]'>Sobre mí</span>
       </h2>
 
-      <article className="w-[1000px]">
+      <article className="
+        w-screen px-6
+        lg:w-[1000px] lg:px-0
+      ">
         <p className="text-left text-base relative mx-auto mt-6">
           Soy un desarrollador de Frontend Junior autodidacta con experiencia en <strong className="text-[#ff9e27]">HTML, CSS, JavaScript, React, Next.js, Tailwind, postgreSQL y Node.js/Express.js</strong>. Estoy comprometido con el aprendizaje continúo y recientemente completé un proyecto personal, se trata de una aplicación de libros hecha con React y Next.js, y está diseñada con el objetivo de ayudar a los usuarios a organizar su colección de libros.
           <br />
           Mi experiencia pasada en logística y liderazgo me ha enseñado habilidades como <strong className="text-[#ff9e27]">gestión de equipos, comunicación y resolución de problemas</strong>, las cuales aplico también en el desarrollo de software.
         </p>
 
-        <h3 className='flex mr-auto mt-16 mb-6'>
+        <h3 className='flex mr-auto mt-16 mb-8'>
           <Image
             src={stack}
             alt='Stack de Tecnologías'
@@ -42,7 +54,10 @@ const About = () => {
           <span className='text-4xl text-[#ff9e27]'>Tecnologías</span>
         </h3>
 
-        <section className='flex gap-x-2 justify-center items-center'>
+        <section className='
+          flex flex-col flex-wrap gap-x-2 gap-y-2 justify-center items-center
+          md:flex-row
+        '>
           <section className='h-fit px-1 py-8 flex flex-col items-center justify-center bg-[#fafcfc] rounded-[40px] shadow-lg'>
             <h4 className='text-3xl font-light tracking-[0.25rem] mb-6'>Frontend</h4>
             <ol className='flex flex-wrap w-[350px] mx-auto justify-center items-center gap-x-2 gap-y-2'>
@@ -202,7 +217,7 @@ const About = () => {
         </section>
 
       </article>
-    </section>
+    </motion.section>
   );
 }
 

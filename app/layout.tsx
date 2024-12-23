@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-pt-24">
+    <html lang="es" className="overflow-x-hidden scroll-py-32">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

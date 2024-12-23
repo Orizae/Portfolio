@@ -53,7 +53,7 @@ const ImageDisplayer = () => {
   return (
 
     images.map((image) => (
-      <section className="flex flex-col content-center justify-center mt-4 mr-auto gap-x-8 gap-y-2 bg-[#fafcfc] px-2 pt-2 pb-4 rounded-lg" key={image.id}>
+      <section className="flex flex-col h-fit content-center justify-center mt-4 mr-auto gap-x-8 gap-y-2 bg-[#fafcfc] px-2 pt-2 pb-4 rounded-lg" key={image.id}>
         <button>
           <a href={image.link} rel="noreferrer" target="_blank">
             <Image
@@ -61,12 +61,20 @@ const ImageDisplayer = () => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="w-[470px] h-[250px] border-2 border-white"
-            />
-            <div className="flex flex-col gap-y-2 mt-2">
-              <h3 className="text-2xl mr-auto font-medium">{image.position}</h3>
-              <div className="flex gap-x-2 items-baseline">
-                <h4 className="text-2xl text-[#ff9e27]">{image.company}</h4>
+              className="
+                w-fit h-[215px] border-2 border-white relative top-0 justify-center items-center mx-auto
+                md:w-[470px] md:h-[250px]
+              " />
+            <div className="flex flex-col mt-4 text-start">
+              <h3 className="
+                text-xl mr-auto font-normal
+                md:text-2xl
+              ">{image.position}</h3>
+              <div className="flex gap-x-4 items-baseline">
+                <h4 className="
+                  text-xl text-[#ff9e27]
+                  md:text-2xl
+                ">{image.company}</h4>
                 <time className="text-sm">{image.date}</time>
               </div>
             </div>
