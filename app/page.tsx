@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Loading from './components/Loading';
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import Experience from "./components/Experience";
@@ -17,10 +18,10 @@ export default function Home() {
 
   return (
     <div id='top'>
-      {loading ? <div className='justify-center text-center items-center mx-auto text-2xl relative top-[50vh]'>Cargando...</div> :
+
+      {loading ? <Loading /> : (
         <div className="relative overflow-hidden min-h-screen font-[family-name:var(--font-geist-sans)]">
           <Navbar />
-
           <main className="flex flex-col relative items-center mx-auto max-w-screen-2xl">
             <Card />
             <About />
@@ -29,7 +30,8 @@ export default function Home() {
           </main>
           <Footer />
         </div>
-      }
+      )}
+
     </div>
 
   );

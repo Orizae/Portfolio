@@ -53,7 +53,7 @@ const ImageDisplayer = () => {
   return (
 
     images.map((image) => (
-      <section className="flex flex-col h-fit content-center justify-center mt-4 mr-auto gap-x-8 gap-y-2 bg-[#fafcfc] px-2 pt-2 pb-4 rounded-lg" key={image.id}>
+      <section className="flex flex-col h-fit content-center justify-center mt-4 mx-auto gap-x-8 gap-y-2 bg-[#fafcfc] px-2 pt-2 pb-4 rounded-lg" key={image.id}>
         <button>
           <a href={image.link} rel="noreferrer" target="_blank">
             <Image

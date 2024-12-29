@@ -38,7 +38,7 @@ const About = () => {
         lg:w-[1000px] lg:px-0
       ">
         <p className="text-left text-base relative mx-auto mt-6">
-          Soy un desarrollador de Frontend Junior autodidacta con experiencia en <strong className="text-[#ff9e27]">HTML, CSS, JavaScript, React, Next.js, Tailwind, postgreSQL y Node.js/Express.js</strong>. Estoy comprometido con el aprendizaje continúo y recientemente completé un proyecto personal, se trata de una aplicación de libros hecha con React y Next.js, y está diseñada con el objetivo de ayudar a los usuarios a organizar su colección de libros.
+          Soy desarrollador de Frontend Junior autodidacta con experiencia en <strong className="text-[#ff9e27]">HTML, CSS, JavaScript, React, Next.js, Tailwind, postgreSQL y Node.js/Express.js</strong>. Estoy comprometido con el aprendizaje continúo y recientemente completé un proyecto personal, se trata de una aplicación de libros hecha con React y Next.js, y está diseñada con el objetivo de ayudar a los usuarios a organizar su colección de libros.
           <br />
           Mi experiencia pasada en logística y liderazgo me ha enseñado habilidades como <strong className="text-[#ff9e27]">gestión de equipos, comunicación y resolución de problemas</strong>, las cuales aplico también en el desarrollo de software.
         </p>

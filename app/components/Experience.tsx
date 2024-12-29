@@ -9,7 +9,7 @@ const Experience = () => {
   return (
     <motion.section
       id='exp'
-      className="flex flex-col items-center justify-center mx-auto mt-20 mb-16"
+      className="flex flex-col items-center justify-center mx-auto mt-20 mb-20"
       initial={{ transform: "translateY(50vh)" }}
       animate={{ transform: "translateY(0px)" }}
       transition={{ type: "spring" }}
@@ -20,7 +20,7 @@ const Experience = () => {
       </h2>
 
       <article className="
-        flex flex-wrap mt-4 w-screen px-6
+        flex flex-wrap mt-4 w-screen px-6 items-center content-center
         lg:w-[1000px] lg:px-0
       ">
         <ImageDisplayer />

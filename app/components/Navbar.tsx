@@ -18,7 +18,7 @@ const Navbar = () => {
         <HiOutlineMenu className='w-6 h-6 z-10' />
       </button>
 
-      <div className={isOpen ? 'bg-gray-200 w-[69vw] h-screen ease-linear duration-150 md:bg-transparent md:items-center md:text-center md:justify-center md:w-full md:relative md:z-0 md:h-20' : 'w-auto h-0 mx-auto relative items-center text-center justify-center delay-100 y-ease-out duration-150'}>
+      <div className={isOpen ? 'bg-gray-200 w-[69vw] h-screen ease-linear duration-150 sm:w-1/2 md:bg-transparent md:items-center md:text-center md:justify-center md:w-full md:relative md:z-0 md:h-20' : 'h-0 relative left-0 top-0 items-center text-center justify-center'}>
         <ul className={isOpen ? 'flex flex-col relative gap-y-16 top-0 md:flex-row md:gap-y-0 md:gap-x-7 md:items-center md:text-black md:justify-center md:text-center' : "flex flex-row relative top-3 gap-x-7 content-center items-center justify-center text-center py-3 text-xl tracking-wide"}>
           <motion.li
             initial={{ transform: "translateY(-100px)" }}
@@ -27,6 +27,7 @@ const Navbar = () => {
           >
             <a
               href="#about"
+              onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold relative md:flex md:"}
             >
               Sobre mí
@@ -39,6 +40,7 @@ const Navbar = () => {
           >
             <a
               href="#exp"
+              onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:flex"}
             >
               Experiencia
@@ -51,6 +53,7 @@ const Navbar = () => {
           >
             <a
               href="#proj"
+              onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:flex"}
             >
               Proyectos

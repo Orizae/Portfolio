@@ -73,9 +73,7 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <div className="
-              bg-[#fafcfc] rounded-lg w-fit mx-auto p-4 mt-6 z-[-10] relative
-            ">
+            <div className="bg-[#fafcfc] rounded-lg w-fit pt-4 pb-6 px-4 mt-4 mx-auto z-[-10] relative">
               <h4 className="font-medium text-[#ff9e27] text-xl text-center">Tecnologías utilizadas</h4>
               <ol className="flex flex-wrap gap-x-2 gap-y-2 justify-center mt-2">
                 <li className="w-fit">

@@ -8,13 +8,13 @@ import Contact from "./Contact";
 const Card = () => {
   return (
     <motion.section className="
-      flex flex-col gap-x-14 mb-16 mt-32 h-fit items-center justify-center
+      flex flex-col gap-x-14 mb-16 mt-36 h-fit items-center justify-center
       sm:flex-col
       md:flex-col md:mb-24
       lg:flex-row lg:mt-48
     "
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{
         duration: 0.8,
         delay: 0.5,
@@ -34,7 +34,7 @@ const Card = () => {
       <div className="
         gap-y-8 mt-12
         sm:mt-12
-        md:mt-12
+        lg:mt-0
       ">
         <h1 className="items-center">
           <div className="
