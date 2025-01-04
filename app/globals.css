@@ -15,6 +15,7 @@
     rgba(255, 224, 185, 1) 85%,
     rgba(255, 158, 39, 1) 100%
   );
+  --r-b_shadow: inset 5px 10px 50px 0px rgba(99, 99, 99, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,4 +59,8 @@ body {
 
 .photoBackground {
   background: var(--photo_background);
+}
+
+.rbShadow {
+  box-shadow: var(--r-b_shadow);
 }

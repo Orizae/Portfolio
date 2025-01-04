@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa6";
 import { useState } from 'react';
 import Image from "next/image";
@@ -14,9 +11,14 @@ import nextjs_logo from '@/public/icons/nextjs_logo.svg';
 import node_logo from '@/public/icons/nodejs_logo.svg';
 import express_logo from '@/public/icons/expressjs_logo.svg';
 import postgres_logo from '@/public/icons/postgresql_logo.svg';
+import { translations, TranslationsType } from "@/public/translations";
+import { useLanguage } from "../contexts/LaunguageContext";
 
 const Projects = () => {
   const [openImage, setOpenImage] = useState<number | null>(null);
+
+  const { language } = useLanguage();
+  const t = translations[language as keyof TranslationsType];
 
   const images = [
     { id: 1, src: home_page, alt: 'myLib Homepage', width: 500, height: 500 },
@@ -30,16 +32,12 @@ const Projects = () => {
   }
 
   return (
-    <motion.section
-      id='proj'
-      className="flex flex-col items-center justify-center mx-auto mb-16"
-      initial={{ transform: "translateY(50vh)" }}
-      animate={{ transform: "translateY(0px)" }}
-      transition={{ type: "spring" }}
-    >
+    <section
+      id='proyectos'
+      className="flex flex-col items-center justify-center mx-auto mb-16">
       <h2 className="flex mr-auto pl-6 lg:pl-0">
         <FaCode className="text-[#ff9e27] w-12 h-12 mr-3 relative bottom-1" />
-        <span className='text-4xl text-[#ff9e27]'>Proyectos</span>
+        <span className='text-4xl text-[#ff9e27]'>{t.tituloProyectos}</span>
       </h2>
 
       <div className="flex flex-col mr-auto">
@@ -50,9 +48,9 @@ const Projects = () => {
           <div className="w-full mt-6 inline">
             <h3 className="text-2xl font-semibold mb-4">myLib - Your personal library</h3>
             <p className="text-left text-pretty text-base mx-auto">
-              En este proyecto he aplicado los conocimientos que he adquirido hasta ahora; inicialmente, utilicé únicamente React y Next.js para el Frontend. Sin embargo, a medida que surgieron nuevas necesidades, fui adaptando y ampliando el alcance del proyecto.<br></br>
-              En un principio, los libros se almacenaban en un fichero JSON de forma local; con el tiempo, comprendí que era necesario contar con un Backend. Para ello, implementé una API utilizando Node.js/Express; además, para garantizar que los datos estuvieran bien estructurados, utilicé PostgreSQL para crear una base de datos que almacenara toda la información de cada libro (título, autor, país, género y descripción).<br></br>
-              Actualmente, estoy en la etapa final del desarrollo: he añadido la funcionalidad de autenticación de usuarios mediante Auth0, lo que permite que cada usuario acceda a la biblioteca tras un proceso rápido y seguro de autenticación. Una vez autenticados, los usuarios solo podrán visualizar los libros que pertenecen a su biblioteca personal; para lograr esto, estoy adaptando la base de datos para soportar esta funcionalidad.
+              {t.proyectos1}<br></br>
+              {t.proyectos2}<br></br>
+              {t.proyectos3}
             </p>
 
 
@@ -65,7 +63,7 @@ const Projects = () => {
                     width={image.width}
                     height={image.height}
                     className={openImage === image.id ?
-                      "h-[350px] w-screen border-[#efefef] mx-auto content-center border-[1px] rounded-xl z-15 scale-x-110 ease-in-out duration-200 shadow-2xl hover:cursor-pointer sm:scale-x-100 md:w-[500px] md:top-[25%] md:bottom-0 md:left-[25%] md:right-[25%] md:scale-125" :
+                      "h-[350px] w-screen border-[#efefef] mx-0 content-center border-[1px] rounded-xl z-15 scale-x-110 ease-in-out duration-200 shadow-2xl hover:cursor-pointer sm:scale-x-100 md:mx-auto md:w-[500px] md:top-[25%] md:bottom-0 md:left-[25%] md:right-[25%] md:scale-125" :
                       'h-[330px] border-gray-300 border-[1px] rounded-lg hover:cursor-pointer'
                     }
                     onClick={() => handleImageClick(image.id)}
@@ -74,7 +72,7 @@ const Projects = () => {
               ))}
             </div>
             <div className="bg-[#fafcfc] rounded-lg w-fit pt-4 pb-6 px-4 mt-4 mx-auto z-[-10] relative">
-              <h4 className="font-medium text-[#ff9e27] text-xl text-center">Tecnologías utilizadas</h4>
+              <h4 className="font-medium text-[#ff9e27] text-xl text-center">{t.proyectos4}</h4>
               <ol className="flex flex-wrap gap-x-2 gap-y-2 justify-center mt-2">
                 <li className="w-fit">
                   <span className='flex flex-row text-sm text-pretty gap-x-1 justify-center bg-orange-50 border-[1px] border-gray-500 rounded-3xl px-3 py-1'>
@@ -143,7 +141,7 @@ const Projects = () => {
           </div>
         </article>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

@@ -1,11 +1,18 @@
 'use client'
 
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LaunguageContext';
+import { translations, TranslationsType } from '@/public/translations';
 import { motion } from "framer-motion";
+import LanguageToggle from './LanguageToggle';
 import { HiOutlineMenu } from "react-icons/hi";
+import { HiOutlineHome } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { language } = useLanguage();
+  const t = translations[language as keyof TranslationsType];
 
   return (
     <motion.section
@@ -26,11 +33,24 @@ const Navbar = () => {
             transition={{ type: "spring" }}
           >
             <a
-              href="#about"
+              href="#"
               onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold relative md:flex md:"}
             >
-              Sobre mí
+              {isOpen ? 'Início' : <HiOutlineHome />}
+            </a>
+          </motion.li>
+          <motion.li
+            initial={{ transform: "translateY(-100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            transition={{ type: "spring" }}
+          >
+            <a
+              href="#sobre-mi"
+              onClick={() => setIsOpen(false)}
+              className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold relative md:flex md:"}
+            >
+              {t.navLinks1}
             </a>
           </motion.li>
           <motion.li
@@ -39,11 +59,11 @@ const Navbar = () => {
             transition={{ delay: 0.25, type: "spring" }}
           >
             <a
-              href="#exp"
+              href="#experiencia"
               onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:flex"}
             >
-              Experiencia
+              {t.navLink2}
             </a>
           </motion.li>
           <motion.li
@@ -52,12 +72,19 @@ const Navbar = () => {
             transition={{ delay: 0.5, type: "spring" }}
           >
             <a
-              href="#proj"
+              href="#proyectos"
               onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:flex"}
             >
-              Proyectos
+              {t.navLink3}
             </a>
+          </motion.li>
+          <motion.li
+            initial={{ transform: "translateY(-100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            transition={{ delay: 0.5, type: "spring" }}
+          >
+            <LanguageToggle />
           </motion.li>
         </ul>
       </div>

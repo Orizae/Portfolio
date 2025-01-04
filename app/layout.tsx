@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { LanguageProvider } from "./contexts/LaunguageContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="overflow-x-hidden scroll-py-32">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang="es" className="overflow-x-hidden scroll-py-32">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

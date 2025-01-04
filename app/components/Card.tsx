@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import foto_perfil from '@/public/images/Foto_porfolio.jpg';
 import Contact from "./Contact";
+import { translations, TranslationsType } from "@/public/translations";
+import { useLanguage } from "../contexts/LaunguageContext";
 
 const Card = () => {
+  const { language } = useLanguage();
+  const t = translations[language as keyof TranslationsType];
+
   return (
     <motion.section className="
       flex flex-col gap-x-14 mb-16 mt-36 h-fit items-center justify-center
@@ -15,19 +20,21 @@ const Card = () => {
     "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{
-        duration: 0.8,
-        delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01]
-      }}
+      transition={{ duration: 1.5 }}
     >
-      <div className='flex relative photoBackground w-[300px] h-[300px] items-center rounded-[50%]'>
+      <div className='
+        flex relative photoBackground w-60 h-60 items-center rounded-[50%]
+        sm:w-[300px] sm:h-[300px]
+        '>
         <Image
           src={foto_perfil}
           alt='Foto de perfil'
           width='280'
           height='280'
-          className="rounded-[50%] mx-auto"
+          className="
+            rounded-[50%] mx-auto w-56 h-56
+            sm:w-[280px] sm:h-[280px]
+          "
           priority={true}
         />
       </div>
@@ -40,16 +47,16 @@ const Card = () => {
           <div className="
             text-8xl mb-6 text-[#ff9e27] text-center
             sm:text-start
-          ">¡Hola!</div>
+          ">{t.hola1}</div>
           <div className="
             text-2xl text-center
             sm:text-start
-          ">Mi nombre es Gonçalo Cagica</div>
+          ">{t.hola2}</div>
           <div className="
             text-2xl text-center text-wrap px-6
             sm:text-start sm:px-0
             md:text-start md:px-0
-          ">Y soy <strong className="text-[#ff9e27]">Desarrollador Junior de Frontend</strong></div>
+          ">{t.hola3}<strong className="text-[#ff9e27]">{t.hola4}</strong></div>
         </h1>
         <Contact />
       </div>

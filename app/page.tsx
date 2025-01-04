@@ -17,7 +17,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div id='top'>
+    <div id='#'>
 
       {loading ? <Loading /> : (
         <div className="relative overflow-hidden min-h-screen font-[family-name:var(--font-geist-sans)]">
