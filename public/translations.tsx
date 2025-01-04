@@ -29,6 +29,7 @@ export type TranslationsType = {
     proyectos2: string;
     proyectos3: string;
     proyectos4: string;
+    footer: string;
   };
   en: {
     navLinks1: string;
@@ -60,6 +61,7 @@ export type TranslationsType = {
     proyectos2: string;
     proyectos3: string;
     proyectos4: string;
+    footer: string;
   };
 };
 
@@ -94,6 +96,7 @@ export const translations: TranslationsType = {
     proyectos2: "En un principio, los libros se almacenaban en un fichero JSON de forma local; con el tiempo, comprendí que era necesario contar con un Backend. Para ello, implementé una API utilizando Node.js/Express; además, para garantizar que los datos estuvieran bien estructurados, utilicé PostgreSQL para crear una base de datos que almacenara toda la información de cada libro (título, autor, país, género y descripción).",
     proyectos3: "Actualmente, estoy en la etapa final del desarrollo: he añadido la funcionalidad de autenticación de usuarios mediante Auth0, lo que permite que cada usuario acceda a la biblioteca tras un proceso rápido y seguro de autenticación. Una vez autenticados, los usuarios solo podrán visualizar los libros que pertenecen a su biblioteca personal; para lograr esto, estoy adaptando la base de datos para soportar esta funcionalidad.",
     proyectos4: "Tecnologías utilizadas",
+    footer: "Volver al inicio",
   },
   en: {
     navLinks1: "About me",
@@ -125,5 +128,6 @@ export const translations: TranslationsType = {
     proyectos2: "Initially, the books were stored in a JSON file locally; over time, I realized that a backend was necessary. For this, I implemented an API using Node.js/Express; furthermore, to ensure that the data was well structured, I used PostgreSQL to create a database that stored all the information for each book (title, author, country, genre and description).",
     proyectos3: "Currently, I am in the final stage of development: I have added user authentication functionality via Auth0, which allows each user to access the library after a fast and secure authentication process. Once authenticated, users will only be able to view books that belong to their personal library; to achieve this, I am adapting the database to support this functionality.",
     proyectos4: "Technologies used",
+    footer: "Back to top",
   }
 }
