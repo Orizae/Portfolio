@@ -37,7 +37,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={isOpen ? 'absolute top-[100px] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold relative md:flex md:"}
             >
-              {isOpen ? 'Inicio' : <HiOutlineHome />}
+              {isOpen ? t.navLinks : <HiOutlineHome />}
             </a>
           </motion.li>
           <motion.li
@@ -83,6 +83,7 @@ const Navbar = () => {
             initial={{ transform: "translateY(-100px)" }}
             animate={{ transform: "translateY(0px)" }}
             transition={{ delay: 0.5, type: "spring" }}
+            className={isOpen ? 'absolute top-[50vh] left-6 text-3xl tracking-[0.2em] ease-linear duration-150 hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:relative md:top-6 md:text-xl' : "hidden tracking-[0.2em] hover:text-[#ff9e27] hover:ease-in hover:duration-100 active:font-bold md:flex"}
           >
             <LanguageToggle />
           </motion.li>

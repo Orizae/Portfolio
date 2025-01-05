@@ -4,51 +4,63 @@ import chimparoo from '@/public/images/chimparoo.jpg';
 import make_altar from '@/public/images/makeup_altar.jpg';
 import mellanie_mills from '@/public/images/mellanie_mills.jpg';
 import handy from '@/public/images/produit_handy.jpg';
+import { useLanguage } from '../contexts/LaunguageContext';
+import { translations, TranslationsType } from '@/public/translations';
 
-const images = [
-  {
-    id: 5, src: ceramed, alt: 'Ceramed Homepage', width: 500, height: 500,
-    position: 'Desarrollador de Frontend Junior',
-    company: 'Ceramed',
-    date: 'Abril 2024, Actualmente...',
-    description: '',
-    link: 'https://www.ceramed.ca/'
-  },
-  {
-    id: 4, src: handy, alt: 'Produits Handy Homepage', width: 500, height: 500,
-    position: 'Desarrollador de Frontend Junior',
-    company: 'Produits Adaptés Handy',
-    date: 'Diciembre 2024',
-    description: '',
-    link: 'https://www.produitshandy.com/'
-  },
-  {
-    id: 3, src: mellanie_mills, alt: 'Mellanie Mills Homepage', width: 500, height: 500,
-    position: 'Desarrollador de Frontend Junior',
-    company: 'Melanie Mills Hollywood',
-    date: 'Mayo 2024',
-    description: '',
-    link: 'https://melaniemillshollywood.com/'
-  },
-  {
-    id: 2, src: make_altar, alt: 'Makeup Altar Homepage', width: 500, height: 500,
-    position: 'Desarrollador de Frontend Junior',
-    company: 'The Makeup Altar',
-    date: 'Abril - Mayo 2024',
-    description: '',
-    link: 'https://themakeupaltar.com/'
-  },
-  {
-    id: 1, src: chimparoo, alt: 'Chimparoo Homepage', width: 500, height: 500,
-    position: 'Desarrollador de Frontend Junior',
-    company: 'Chimparoo',
-    date: 'Abril 2024',
-    description: '',
-    link: 'https://chimparoo.ca'
-  }
-]
+const TranslatedImages = () => {
+  const { language } = useLanguage();
+  const t = translations[language as keyof TranslationsType];
+
+  const images = [
+    {
+      id: 5, src: ceramed, alt: t.imagen5.alt, width: 500, height: 500,
+      position: t.imagen5.posicion,
+      company: t.imagen5.empresa,
+      date: t.imagen5.fecha,
+      description: t.imagen5.descripcion,
+      link: 'https://www.ceramed.ca/'
+    },
+    {
+      id: 4, src: handy, alt: t.imagen4.alt, width: 500, height: 500,
+      position: t.imagen4.posicion,
+      company: t.imagen4.empresa,
+      date: t.imagen4.fecha,
+      description: t.imagen4.descripcion,
+      link: 'https://www.produitshandy.com/'
+    },
+    {
+      id: 3, src: mellanie_mills, alt: t.imagen3.alt, width: 500, height: 500,
+      position: t.imagen3.posicion,
+      company: t.imagen3.empresa,
+      date: t.imagen3.fecha,
+      description: t.imagen3.descripcion,
+      link: 'https://melaniemillshollywood.com/'
+    },
+    {
+      id: 2, src: make_altar, alt: t.imagen2.alt, width: 500, height: 500,
+      position: t.imagen2.posicion,
+      company: t.imagen2.empresa,
+      date: t.imagen2.fecha,
+      description: t.imagen2.descripcion,
+      link: 'https://themakeupaltar.com/'
+    },
+    {
+      id: 1, src: chimparoo, alt: t.imagen1.alt, width: 500, height: 500,
+      position: t.imagen1.posicion,
+      company: t.imagen1.empresa,
+      date: t.imagen1.fecha,
+      description: t.imagen1.descripcion,
+      link: 'https://chimparoo.ca'
+    }
+  ]
+
+  return images
+}
+
+
 
 const ImageDisplayer = () => {
+  const images = TranslatedImages();
 
   return (
 

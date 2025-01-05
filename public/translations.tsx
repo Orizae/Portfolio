@@ -1,5 +1,6 @@
 export type TranslationsType = {
   es: {
+    navLinks: string;
     navLinks1: string;
     navLink2: string;
     navLink3: string;
@@ -19,6 +20,41 @@ export type TranslationsType = {
     stack3: string;
     stack4: string;
     tituloExperiencia: string;
+    imagen1: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen2: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen3: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen4: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen5: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
     experiencia1: string;
     experiencia2: string;
     experiencia3: string;
@@ -32,6 +68,7 @@ export type TranslationsType = {
     footer: string;
   };
   en: {
+    navLinks: string;
     navLinks1: string;
     navLink2: string;
     navLink3: string;
@@ -51,6 +88,41 @@ export type TranslationsType = {
     stack3: string;
     stack4: string;
     tituloExperiencia: string;
+    imagen1: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen2: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen3: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen4: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
+    imagen5: {
+      alt: string,
+      posicion: string,
+      empresa: string,
+      fecha: string,
+      descripcion: string,
+    },
     experiencia1: string;
     experiencia2: string;
     experiencia3: string;
@@ -67,13 +139,14 @@ export type TranslationsType = {
 
 export const translations: TranslationsType = {
   es: {
+    navLinks: "Inicio",
     navLinks1: "Sobre mí",
     navLink2: "Experiencia",
     navLink3: "Proyectos",
     hola1: "¡Hola!",
     hola2: "Mi nombre es Gonçalo Cagica",
     hola3: "Y soy ",
-    hola4: "Desarrollador Junior de Frontend",
+    hola4: "Desarrollador de Frontend Junior",
     tituloAbout: "Sobre mí",
     introducción1: "Soy desarrollador de Frontend Junior autodidacta con experiencia en ",
     introducción2: "HTML, CSS, JavaScript, React, Next.js, Tailwind, postgreSQL y Node.js/Express.js",
@@ -86,6 +159,41 @@ export const translations: TranslationsType = {
     stack3: "Backend",
     stack4: "Herramientas",
     tituloExperiencia: "Experiencia Laboral",
+    imagen1: {
+      alt: "Página de inicio de Chimparoo",
+      posicion: "Desarrollador de Frontend Junior",
+      empresa: "Chimparoo",
+      fecha: "Abril 2024",
+      descripcion: "",
+    },
+    imagen2: {
+      alt: "Página de inicio de Makeup Altar",
+      posicion: "Desarrollador de Frontend Junior",
+      empresa: "The Makeup Altar",
+      fecha: "Abril - Mayo 2024",
+      descripcion: "",
+    },
+    imagen3: {
+      alt: "Página de inicio de Mellanie Mills",
+      posicion: "Desarrollador de Frontend Junior",
+      empresa: "Melanie Mills Hollywood",
+      fecha: "Mayo 2024",
+      descripcion: "",
+    },
+    imagen4: {
+      alt: "Página de inicio de Produits Handy",
+      posicion: "Desarrollador de Frontend Junior",
+      empresa: "Produits Adaptés Handy",
+      fecha: "Diciembre 2024",
+      descripcion: "",
+    },
+    imagen5: {
+      alt: "Página de inicio de Ceramed",
+      posicion: "Desarrollador de Frontend Junior",
+      empresa: "Ceramed",
+      fecha: "Abril 2024, Actualmente...",
+      descripcion: "",
+    },
     experiencia1: "Responsable de la gestión de contenido de las tienda online ",
     experiencia2: "Ceramed, Produits Adaptés Handy, Melanie Mills Hollywood, The Makeup Altar y Chimparoo",
     experiencia3: " en Shopify, incluyendo la redacción de textos optimizados para SEO, la edición de imágenes utilizando Photoshop, compresión de las mismas para mantener un rendimiento óptimo y tiempos de carga rápidos, y de integrar la información proporcionada por el cliente final en los componentes dinámicos de la tienda, asegurando que los datos se reflejan correctamente en el frontend. En estos proyectos he aplicado personalizaciones específicas utilizando ",
@@ -99,29 +207,65 @@ export const translations: TranslationsType = {
     footer: "Volver al inicio",
   },
   en: {
+    navLinks: "Home",
     navLinks1: "About me",
     navLink2: "Experience",
     navLink3: "Projects",
     hola1: "Hi!",
     hola2: "My name is Gonçalo Cagica",
-    hola3: "And I'm ",
-    hola4: "a Junior Fronted Developer",
+    hola3: "And I'm a",
+    hola4: " Junior Fronted Developer",
     tituloAbout: "About me",
     introducción1: "I'm a self-thaught Junior Frontend Developer with experience in ",
     introducción2: "HTML, CSS, JavaScript, React, Next.js, Tailwind, postgreSQL and Node.js/Express.js",
-    introducción3: ". I am committed to continuous learning and recently completed a personal project, it is a book application made with React and Next.js, and it is designed with the goal of helping users to organize their book collection.",
+    introducción3: ". I am committed to continuous learning and recently completed a personal project, it's a book application made with React and Next.js, and it's designed with the goal of helping users to organize their book collection.",
     introducción4: "My past experience in logistics and leadership has taught me skills such as ",
     introducción5: "team management, communication and problem solving",
-    introducción6: "I also apply them in software development.",
+    introducción6: ", which I also apply in software development.",
     stack1: "Technologies",
     stack2: "Frontend",
     stack3: "Backend",
     stack4: "Tools",
     tituloExperiencia: "Experience",
+    imagen1: {
+      alt: "Chimparoo Homepage",
+      posicion: "Junior Frontend Developer",
+      empresa: "Chimparoo",
+      fecha: "April 2024",
+      descripcion: "",
+    },
+    imagen2: {
+      alt: "Makeup Altar Homepage",
+      posicion: "Junior Frontend Developer",
+      empresa: "The Makeup Altar",
+      fecha: "April - May 2024",
+      descripcion: "",
+    },
+    imagen3: {
+      alt: "Mellanie Mills Homepage",
+      posicion: "Junior Frontend Developer",
+      empresa: "Melanie Mills Hollywood",
+      fecha: "May 2024",
+      descripcion: "",
+    },
+    imagen4: {
+      alt: "Produits Handy Homepage",
+      posicion: "Junior Frontend Developer",
+      empresa: "Produits Adaptés Handy",
+      fecha: "December 2024",
+      descripcion: "",
+    },
+    imagen5: {
+      alt: "Ceramed Homepage",
+      posicion: "Junior Frontend Developer",
+      empresa: "Ceramed",
+      fecha: "April 2024, Currently...",
+      descripcion: "",
+    },
     experiencia1: "Responsible for the content management of the online store ",
     experiencia2: "Ceramed, Produits Adaptés Handy, Melanie Mills Hollywood, The Makeup Altar and Chimparoo",
     experiencia3: " in Shopify, including writing SEO optimized texts, editing images using Photoshop, compressing them to maintain optimal performance and fast load times, and integrating the information provided by the end customer into the dynamic components of the store, ensuring that the data is correctly reflected in the frontend. In these projects I have applied specific customizations using ",
-    experiencia4: "CSS y JavaScript",
+    experiencia4: "CSS and JavaScript",
     experiencia5: "to ensure a responsive design on different devices.",
     tituloProyectos: "Projects",
     proyectos1: "In this project I applied the knowledge I have acquired so far; initially, I used only React and Next.js for the Frontend. However, as new needs emerged, I adapted and expanded the scope of the project.",
